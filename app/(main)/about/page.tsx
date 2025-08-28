@@ -8,16 +8,16 @@ export default function AboutPage() {
     const team = [
         { 
             name: "Martial Avadra", 
-            role: "Founder & AI Research Lead", 
+            role: "AI Engineer and Web Developer", 
             img: "/team/martial.jpg", 
             nationality: "Beninese",
             description: "Pioneering AI solutions for digital literacy and misinformation detection"
         },
         { 
             name: "Koubra Gaby", 
-            role: "Senior Data Scientist", 
-            img: "/team/martial.jpg", 
-            nationality: "Beninese",
+            role: "Data Scientist", 
+            img: "/team/koubra.jpg", 
+            nationality: "Tchadian",
             description: "Building intelligent algorithms that protect users from digital threats"
         },
         { 
