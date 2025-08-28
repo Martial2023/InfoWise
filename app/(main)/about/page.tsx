@@ -21,18 +21,18 @@ export default function AboutPage() {
             description: "Building intelligent algorithms that protect users from digital threats"
         },
         { 
-            name: "John Smith", 
-            role: "Backend Architect", 
-            img: "/team/martial.jpg", 
-            nationality: "Beninese",
-            description: "Ensuring robust, scalable infrastructure for global impact"
+            name: "Aichatou Boubacar Soumana", 
+            role: "Data Scientist", 
+            img: "/team/aichatou.jpg", 
+            nationality: "Senegalese",
+            description: "Developing data-driven solutions to enhance digital literacy"
         },
         { 
-            name: "Sarah Lee", 
-            role: "Lead UX Designer", 
-            img: "/team/martial.jpg", 
-            nationality: "Beninese",
-            description: "Crafting intuitive experiences that make learning engaging and accessible"
+            name: "Mahamadou Lamine KATILE", 
+            role: "Data Scientist", 
+            img: "/team/Mahamadou.jpg", 
+            nationality: "Malian",
+            description: "Leveraging data analytics to drive impactful solutions"
         },
     ]
 
