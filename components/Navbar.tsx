@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { HatGlasses, LogIn, LogOut, Menu, Moon, Send, Sun } from "lucide-react";
+import { HatGlasses, LogIn, LogOut, Menu, Moon, Podcast, Send, Sun } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import {
@@ -43,6 +43,7 @@ export default function Navbar() {
 
     const navLinks = [
         { name: "Learn", href: "/podcasts" },
+        { name: "Podcasts", href: "/podcasts" },
         { name: "Fake News Detector", href: "/fake-news-ai" },
         { name: "Scam Shield", href: "/scam-shield" },
         { name: "About", href: "/about" }
@@ -108,6 +109,13 @@ export default function Navbar() {
                                     >
                                         <Send className="w-4 h-4 inline-block mr-1" />
                                         Publish
+                                    </Link>
+                                    <Link
+                                        href={'/upload#your-posts'}
+                                        className={`px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 text-orange-600 dark:text-orange-400}`}
+                                    >
+                                        <Podcast className="w-4 h-4 inline-block mr-1" />
+                                        Your posts
                                     </Link>
                                     <UserButton />
                                 </div>
@@ -200,6 +208,14 @@ export default function Navbar() {
                                                         >
                                                             <Send className="w-4 h-4 inline-block mr-1" />
                                                             Publish
+                                                        </Link>
+
+                                                        <Link
+                                                            href={'/upload#your-posts'}
+                                                            className={`px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 text-orange-600 dark:text-orange-400}`}
+                                                        >
+                                                            <Podcast className="w-4 h-4 inline-block mr-1" />
+                                                            Your posts
                                                         </Link>
                                                         <UserButton />
                                                     </div>

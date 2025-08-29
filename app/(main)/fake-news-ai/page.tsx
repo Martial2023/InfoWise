@@ -81,7 +81,7 @@ export default function Page() {
                                 <ShieldCheck className="w-8 h-8 text-green-500" />
                             )}
                             <h3 className="text-2xl font-bold">
-                                Score de risque : {result.score}%
+                                Risk score: {result.score}%
                             </h3>
                         </div>
                         <p className="text-zinc-700 dark:text-zinc-300 mb-6">
@@ -89,18 +89,18 @@ export default function Page() {
                         </p>
 
                         {/* Suggestion éducative */}
-                        <div className="p-4 bg-gradient-to-r from-orange-100 to-amber-100 dark:from-zinc-700 dark:to-zinc-600 rounded-xl flex items-center justify-between">
-                            <div>
+                        <div className="p-4 bg-gradient-to-r from-orange-100 to-amber-100 dark:from-zinc-700 dark:to-zinc-600 rounded-xl flex flex-col md:flex-row items-center md:justify-between gap-4">
+                            <div className="flex-1">
                                 <h4 className="font-semibold text-zinc-800 dark:text-zinc-200">
-                                    Découvrez comment reconnaître cette technique de manipulation
+                                    Learn how to spot this manipulation technique
                                 </h4>
-                                <p className="text-sm text-zinc-600 dark:text-zinc-300">
-                                    Accédez à une ressource vidéo/audio éducative liée à ce type de désinformation.
+                                <p className="text-sm text-zinc-600 dark:text-zinc-300 mt-1">
+                                    Access an educational video or audio resource related to this type of misinformation.
                                 </p>
                             </div>
-                            <Button asChild variant="outline" className="rounded-xl">
-                                <Link href="/educatif" className="flex items-center">
-                                    Voir la ressource <ExternalLink className="ml-2 w-4 h-4" />
+                            <Button asChild variant="outline" className="rounded-xl w-full md:w-auto">
+                                <Link href="/podcasts" className="flex items-center justify-center px-4 py-2">
+                                    View resource <ExternalLink className="ml-2 w-4 h-4" />
                                 </Link>
                             </Button>
                         </div>

@@ -187,4 +187,16 @@
     @apply bg-background text-foreground;
     letter-spacing: var(--tracking-normal);
   }
+
+  ::-webkit-scrollbar {
+    @apply w-1 h-1
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/60 rounded-full
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-primary/10 rounded-full
+  }
 }

@@ -124,7 +124,7 @@ const page = () => {
 
             <div className="col-span-1 p-6 bg-white dark:bg-zinc-800 rounded-xl shadow-lg w-full">
               <h3 className="text-2xl font-bold text-zinc-800 dark:text-white">{podcast?.title}</h3>
-              <p className="mt-2 text-zinc-600 dark:text-zinc-300">{podcast?.description}</p>
+              <p className="mt-2 text-zinc-600 dark:text-zinc-300 max-h-36 overflow-y-auto">{podcast?.description}</p>
 
               <div className="flex items-center text-sm text-zinc-500 dark:text-zinc-400 mt-4 space-x-4">
                 <User className="w-4 h-4" />
@@ -178,7 +178,9 @@ const page = () => {
             <h3 className="text-xl font-semibold mb-4">
               Question {current + 1}/{quiz.length}
             </h3>
-            <p className="mb-6 text-zinc-700 dark:text-zinc-300 text-wrap">{quiz[current].question}</p>
+            <p className="mb-6 text-zinc-700 dark:text-zinc-300 whitespace-normal break-words">
+              {quiz[current].question}
+            </p>
             <div className="flex flex-col gap-3">
               {quiz[current].choices.map((c, i) => {
                 const isCorrect = c === quiz[current].answer

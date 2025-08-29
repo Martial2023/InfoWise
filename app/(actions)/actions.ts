@@ -84,3 +84,47 @@ export async function getPodcastById(params:getPodcastByIdParams) {
   }
   
 }
+
+export async function getMyPodcasts(): Promise<PodcastType[]> {
+  try {
+    const connectedUser = await getUser();
+    if (!connectedUser || !connectedUser.id) {
+      throw new Error("User not authenticated");
+    }
+
+    const podcasts = await prisma.podcast.findMany({
+      where: { userId: connectedUser.id },
+      orderBy: { createdAt: 'desc' }
+    });
+    return podcasts;
+  } catch (error) {
+    console.error("Error fetching my podcasts:", error);
+    throw new Error("Failed to fetch my podcasts");
+  }
+}
+
+export async function deletePodcast(params: { podcastId: string }) {
+  try {
+    const connectedUser = await getUser();
+    if (!connectedUser || !connectedUser.id) {
+      throw new Error("User not authenticated");
+    }
+
+    const podcast = await prisma.podcast.findUnique({
+      where: { id: params.podcastId }
+    });
+    if (!podcast) {
+      throw new Error("Podcast not found");
+    }
+    if (podcast.userId !== connectedUser.id) {
+      throw new Error("User not authorized to delete this podcast");
+    }
+
+    await prisma.podcast.delete({
+      where: { id: params.podcastId }
+    });
+  } catch (error) {
+    console.error("Error deleting podcast:", error);
+    throw new Error("Failed to delete podcast");
+  }
+}

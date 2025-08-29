@@ -86,28 +86,37 @@ export default function ScamShieldPage() {
 
                         {/* Ressources pratiques */}
                         <div className="space-y-4">
-                            <h4 className="text-lg font-semibold text-zinc-800 dark:text-zinc-200 mb-2">
-                                Ressources utiles
+                            <h4 className="text-lg md:text-xl font-semibold text-zinc-800 dark:text-zinc-200 mb-2">
+                                Useful resources
                             </h4>
-                            <div className="p-4 bg-gradient-to-r from-red-100 to-orange-100 dark:from-zinc-700 dark:to-zinc-600 rounded-xl space-y-3">
+                            <div className="p-4 bg-gradient-to-r from-red-100 to-orange-100 dark:from-zinc-700 dark:to-zinc-600 rounded-xl grid grid-cols-1 md:grid-cols-3 gap-3">
                                 <a
                                     href="https://www.internet-signalement.gouv.fr/"
                                     target="_blank"
-                                    className="flex items-center text-sm text-red-600 dark:text-red-300 hover:underline"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-between w-full px-3 py-2 rounded-lg text-sm md:text-base text-red-600 dark:text-red-300 hover:underline"
+                                    aria-label="Report official fraud (external)"
                                 >
-                                    Signaler une fraude officielle <ExternalLink className="ml-2 w-4 h-4" />
+                                    <span>Report official fraud</span>
+                                    <ExternalLink className="ml-2 w-4 h-4" />
                                 </a>
+
                                 <a
-                                    href="/guides/protection"
-                                    className="flex items-center text-sm text-orange-600 dark:text-orange-300 hover:underline"
+                                    href="/podcasts"
+                                    className="flex items-center justify-between w-full px-3 py-2 rounded-lg text-sm md:text-base text-orange-600 dark:text-orange-300 hover:underline"
+                                    aria-label="Tips to protect yourself"
                                 >
-                                    Conseils pour se protéger <ExternalLink className="ml-2 w-4 h-4" />
+                                    <span>Tips to protect yourself</span>
+                                    <ExternalLink className="ml-2 w-4 h-4" />
                                 </a>
+
                                 <a
                                     href="/assistance"
-                                    className="flex items-center text-sm text-zinc-700 dark:text-zinc-300 hover:underline"
+                                    className="flex items-center justify-between w-full px-3 py-2 rounded-lg text-sm md:text-base text-zinc-700 dark:text-zinc-300 hover:underline"
+                                    aria-label="Contact support"
                                 >
-                                    Contacter l’assistance <ExternalLink className="ml-2 w-4 h-4" />
+                                    <span>Contact support</span>
+                                    <ExternalLink className="ml-2 w-4 h-4" />
                                 </a>
                             </div>
                         </div>

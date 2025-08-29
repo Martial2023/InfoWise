@@ -24,7 +24,7 @@ export default function AboutPage() {
             name: "Aichatou Boubacar Soumana", 
             role: "Data Scientist", 
             img: "/team/aichatou.jpg", 
-            nationality: "Senegalese",
+            nationality: "Nigerian",
             description: "Developing data-driven solutions to enhance digital literacy"
         },
         { 
